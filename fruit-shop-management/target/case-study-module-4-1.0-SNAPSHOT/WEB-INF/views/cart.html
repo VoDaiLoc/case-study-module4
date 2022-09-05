@@ -23,7 +23,7 @@
             <div class="content--cart--money--bottom">
                 <h4>Tổng Tiền : </h4>
                 <span></span>
-                <a href="javascript: void(0);">Thanh toán</a>
+                <a href="javascript: void(0);">Đặt hàng</a>
             </div>
         </div>
     </div>
@@ -131,13 +131,13 @@
                 }
             });
     }
-    page.commands.drawProvinces().then(() => {
-        let provinceId = $('#province--delivery').val();
-        page.commands.drawDistricts(provinceId).then(() => {
-            let districtId = $('#district--delivery').val();
-            page.commands.drawWards(districtId);
-        });
-    });
+    // page.commands.drawProvinces().then(() => {
+    //     let provinceId = $('#province--delivery').val();
+    //     page.commands.drawDistricts(provinceId).then(() => {
+    //         let districtId = $('#district--delivery').val();
+    //         page.commands.drawWards(districtId);
+    //     });
+    // });
     page.commands.provinceChange = () => {
         page.elements.locationRegion.province.on('change', () => {
             let provinceId =  page.elements.locationRegion.province.val();
@@ -240,7 +240,7 @@
                     $(`.input_${productId}`).val(cartItemReduce.quantity);
                     page.elements.cartInfoGrandTotal.text(`${cartItemReduce.cart.grandTotal} đ`);
                     $(`.total--price_${productId}`).text(`${cartItemReduce.totalPrice} đ`);
-                    App.IziToast.showSuccessAlert(data.success);
+                    // App.IziToast.showSuccessAlert(data.success);
                 })
                 .fail((jqXHR) => {
                     if (jqXHR.status === 401)  {
@@ -282,7 +282,7 @@
                     $(`.input_${productId}`).val(cartItemIncrease.quantity);
                     page.elements.cartInfoGrandTotal.text(`${cartItemIncrease.cart.grandTotal} đ`);
                     $(`.total--price_${productId}`).text(`${cartItemIncrease.totalPrice} đ`);
-                    App.IziToast.showSuccessAlert(data.success);
+                    // App.IziToast.showSuccessAlert(data.success);
                 })
                 .fail((jqXHR) => {
                     if (jqXHR.status === 401)  {

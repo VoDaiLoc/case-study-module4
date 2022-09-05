@@ -5,14 +5,6 @@
         <div class="header--left">
             <h1 style="margin-left: 32px"><a href="/home"><img src="/assets/img/logo_shop.png" alt=""></a></h1>
         </div>
-<!--        <div class="header&#45;&#45;center">-->
-<!--            <ul class="header&#45;&#45;center&#45;&#45;ul">-->
-<!--                <li><a href="/home">Cửa Hàng</a></li>-->
-<!--                <li><a href="#">Giới Thiệu</a></li>-->
-<!--                <li><a href="#">Hỏi Đáp</a></li>-->
-<!--                <li><a href="#">Liên Hệ</a></li>-->
-<!--            </ul>-->
-<!--        </div>-->
         <div class="header--right" th:case="null">
             <form action="" class="header--right--form">
                 <input type="text" class="header--right--form--search" placeholder="Tìm Kiếm sản phẩm...">
@@ -35,22 +27,31 @@
         </div>
         <div class="header--right" th:case="*">
             <form action="" class="header--right--form">
-                <input type="text" class="header--right--form--search" placeholder="Tìm Kiếm">
-<!--                <button><i class="fa fa-search" aria-hidden="true"></i></button>-->
+                <input type="text" class="header--right--form--search" placeholder="Tìm Kiếm sản phẩm...">
+                <button><i class="fa fa-search" aria-hidden="true"></i></button>
                 <div class="header--right--form--result hide">
                     <div class="content--product--search">
 
                     </div>
                     <div class="header--right--form--result--search">
-<!--                        <i class="fa fa-search" aria-hidden="true"></i>-->
                         <p></p>
                     </div>
                 </div>
             </form>
-            <a href="/logout">
-                <i class="fa fa-user-circle" aria-hidden="true"></i>
-                <span th:text="${userDTO.fullName}" data-th-id="${userDTO.id}"></span>
-            </a>
+
+            <li class="nav-item dropdown ">
+                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">
+                    <i class="fa fa-user-circle" aria-hidden="true"></i>
+                    <span th:text="${userDTO.fullName}" data-th-id="${userDTO.id}"></span>
+                </a>
+                <ul class="dropdown-menu" >
+                    <li><a class="dropdown-item show_info_user" href="#" >Profile</a></li>
+                    <li><a class="dropdown-item" href="#">Orders</a></li>
+                    <li><a class="dropdown-item" href="/logout">Logout</a></li>
+                </ul>
+            </li>
+
+
             <a href="javascript: void(0);" class="show_cart" data-th-id="${userDTO.id}"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
         </div>
     </div>

@@ -27,14 +27,14 @@ class App {
         static showErrorAlert(m) {
             iziToast.error({
                 title: 'Error',
-                position: 'topLeft',
+                position: 'topRight',
                 message: m,
             });
         }
         static showSuccessAlert(m) {
             iziToast.success({
                 title: 'Success',
-                position: 'topLeft',
+                position: 'topRight',
                 message: m,
             });
         }

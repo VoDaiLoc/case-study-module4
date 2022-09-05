@@ -63,17 +63,19 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 
 .title--search {
     text-align: center;
-    padding: 10px;
 }
 #search {
     border: 1px solid black;
     display: block;
     margin: 0 auto;
-    width: 70%;
+    width: 60%;
+    border-radius: 5px;
+    height: 40px;
+    background-color: #01752f;
+    color: white;
 }
 .wrapper--right--input {
     position: relative;
-    margin-top: 50px;
     margin-bottom: 50px;
 }
 .wrapper--right--input i:nth-child(1){
@@ -85,7 +87,7 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 .wrapper--right--input i:last-child{
     position: absolute;
     top: 5px;
-    right: 105px;
+    right: 175px;
     font-size: 30px;
     cursor: pointer;
 }

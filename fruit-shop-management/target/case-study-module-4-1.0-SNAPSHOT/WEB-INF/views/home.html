@@ -47,6 +47,7 @@
     }
 
     page.elements.btnShowCartInfo = $('.show_cart');
+    page.elements.btnShowInfoUser = $('.show_info_user');
     page.elements.cartInfoContent = $('.cart--info--content');
     page.elements.cartInfoGrandTotal = $('.cart--info--total span');
     page.dialogs.elements.modalCart = $('.cart');
@@ -245,6 +246,11 @@
             })
         })
     }
+
+    // page.commands.showInfoUser (() => {
+    //     page.elements.btnShowInfoUser.on('click',function (){
+    //         alert("aaaaaa");
+    //     });
     page.commands.reduce = () => {
         $('.quantity-up').on("click",function (){
             let cartItemReduce = new CartItem();
@@ -548,7 +554,7 @@
                 $('.content--product--first').addClass("hide");
                 page.elements.resultSearch.removeClass("show").addClass("hide");
                 $('#search').val(keySearch);
-                $('.wrapper--right--result p').text(`Đã Tìm Thấy ${data.length} Mặt Hàng`);
+                $('.wrapper--right--result p').text(`Đã Tìm Thấy ${data.length} Sản phẩm`);
                 $('.wrapper--right--input .fa-times').removeClass("hide").addClass("show");
                 $('.content--search').removeClass("hide").addClass("show");
                 page.loadData.getProduct();
@@ -635,7 +641,7 @@
                             </div>`;
                     $('.wrapper--right--product').prepend(str);
                 });
-                $('.wrapper--right--result p').text(`Đã Tìm Thấy ${data.length} Mặt Hàng`);
+                $('.wrapper--right--result p').text(`Đã Tìm Thấy ${data.length} sản phẩm`);
                 page.loadData.getProduct();
                 page.commands.doAddCart();
                 page.commands.doAddCartProductInfo();
@@ -685,7 +691,7 @@
                             </div>`;
                 $('.wrapper--right--product').prepend(str);
             });
-            $('.wrapper--right--result p').text(`Đã Tìm Thấy ${data.length} Mặt Hàng`);
+            $('.wrapper--right--result p').text(`Đã Tìm Thấy ${data.length} sản phẩm`);
             page.loadData.getProduct();
             page.commands.doAddCart();
             page.commands.doAddCartProductInfo();
@@ -734,7 +740,7 @@
                         </div>`;
                 $('.wrapper--right--product').prepend(str);
             });
-            $('.wrapper--right--result p').text(`Đã Tìm Thấy ${data.length} Mặt Hàng`);
+            $('.wrapper--right--result p').text(`Đã Tìm Thấy ${data.length} sản phẩm`);
             page.loadData.getProduct();
             page.commands.doAddCart();
             page.commands.doAddCartProductInfo();

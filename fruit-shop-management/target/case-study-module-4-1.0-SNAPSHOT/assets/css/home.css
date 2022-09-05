@@ -81,6 +81,45 @@ body .container .header .header--right .header--right--form {
   width: 80%;
 }
 
+body .container .header .header--right li {
+  float: right;
+  color: white;
+  list-style: none;
+  margin-top: 6px;
+  margin-right: 15px;
+}
+
+body .container .header .header--right li ul {
+  position: absolute !important;
+  inset: 0px auto auto 0px !important;
+  margin: -5px 0px 0px -44px !important;
+  background-color: #01752f !important;
+  border: none !important;
+  border-radius: 0 !important;
+}
+
+body .container .header .header--right a {
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: bold;
+  margin-right: 10px;
+  color: white;
+}
+
+
+body .container .header .header--right li ul li {
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: bold;
+  margin-right: 10px;
+  color: white;
+}
+
+body .container .header .header--right li ul li :hover {
+  background-color: #01752f !important;
+  font-size: 20px !important;
+}
+
 body .container .header .header--right .header--right--form .header--right--form--result {
   width: 85%;
   position: absolute;
@@ -124,6 +163,7 @@ body .container .header .header--right .header--right--form .header--right--form
 body .container .header .header--right .header--right--form .header--right--form--result .header--right--form--result--search {
   cursor: pointer;
   color: rgba(51, 51, 51, 0.7);
+  text-align: center;
 }
 
 body .container .header .header--right .header--right--form .header--right--form--result .header--right--form--result--search:hover {
@@ -646,8 +686,6 @@ body .show--info--product .show--info--product--content #btnClose {
   right: 10px;
   color: black;
   padding: 10px 14px;
-  border: 1px solid black;
-  border-radius: 50px;
 }
 
 body .show--info--product .show--info--product--content .show--info--product--content--img {
